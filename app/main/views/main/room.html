@@ -10,3 +10,9 @@
       <input class="form-control" type="text" value="{{ page._new_category }}" />
     </div>
   </form>
+
+  <ul class="categroy-list">
+    {{ current_room._categories.each do |category| }}
+      <li>{{ category._name }}</li>
+    {{ end }}
+  </ul>

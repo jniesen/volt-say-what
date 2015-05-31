@@ -30,5 +30,15 @@ module Main
       _rooms << { name: page._new_room }
       page._new_room = ''
     end
+
+    def current_room
+      _rooms.select { |room| room._name == params._name }.first
+    end
+
+    def add_category
+      categories = current_room._categories ||= []
+      categories << { name: page._new_category }
+      page._new_category = ''
+    end
   end
 end
