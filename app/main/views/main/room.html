@@ -1,0 +1,12 @@
+<:Title>
+{{ params._name }}
+
+<:Body>
+  <h1>{{ params._name }}</h1>
+
+  <form e-submit="add_category" role="form">
+    <div class="form-group">
+      <label>Category</label>
+      <input class="form-control" type="text" value="{{ page._new_category }}" />
+    </div>
+  </form>

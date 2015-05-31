@@ -1,0 +1,19 @@
+<:Title>
+  Rooms
+
+<:Body>
+  <h1>Room List</h1>
+
+  <form e-submit="add_room" role="form">
+    <div class="form-group">
+      <label>Room</label>
+      <input class="form-control" type="text" value="{{ page._new_room }}" />
+    </div>
+  </form>
+
+  <ul class="room-list">
+    {{ _rooms.each do |room| }}
+      <li><a href="/rooms/{{ room._name }}">{{ room._name }}</a></li>
+    {{ end }}
+  </ul>
+
