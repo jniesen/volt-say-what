@@ -1,5 +1,6 @@
 # See https://github.com/voltrb/volt#routes for more info on routes
 
+client '/room', {}
 client '/rooms', action: 'rooms'
 client '/rooms/{{ name }}', action: 'room'
 

@@ -2,9 +2,9 @@
   Rooms
 
 <:Body>
-  <h1>Room List</h1>
+  <h1>Rooms</h1>
 
-  <form e-submit="add_room" role="form">
+  <form e-submit="add" role="form">
     <div class="form-group">
       <label>Room</label>
       <input class="form-control" type="text" value="{{ page._new_room }}" />
@@ -12,8 +12,7 @@
   </form>
 
   <ul class="room-list">
-    {{ _rooms.each do |room| }}
-      <li><a href="/rooms/{{ room._name }}">{{ room._name }}</a> <button e-click="room.destroy">X</button></li>
+    {{ _roomies.each do |room| }}
+      <li>{{ room._name }}</a> <button e-click="room.destroy">X</button></li>
     {{ end }}
   </ul>
-
